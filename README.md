@@ -1,18 +1,20 @@
-- `# Project Name`
+# Portfolio 2023
 
 
-This project was built by me using {skill(s)}. It will be used as my portfolio to showcase my projects.
-
-- `[Live Deployment](url.link)`
+This project was built using Django. It will be used as my portfolio to showcase my projects.
 
 
-- `![Screenshot placeholder] (paste screenshot file in parenthesis)`
+[Live Deployment](https://url_link.com/)
+
+
+![Screenshot placeholder] (http://paste_screenshot_file_in_parenthesis.com/)
 
 
 ## Technologies Used
-- `* Skill`
-- `* Skill`
-- `* Skill`
+- HTML: Templates
+- CSS: Bootstrap
+- Python: Functionality
+- Django: Backend / Database
 
 
 ## Installation
