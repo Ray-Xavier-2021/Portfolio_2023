@@ -121,7 +121,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # Media Root Folder
-MEDIA_ROOT = os.path.join('media', 'thumbnail')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Redirect uploads
 MEDIA_URL = '/media/'
 
