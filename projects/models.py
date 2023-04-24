@@ -25,12 +25,14 @@ class Project(models.Model):
     description = models.TextField(
       max_length=1000
     )
-    demo = models.CharField(
+    demo = models.URLField(
+      'Live Demo',
       max_length=200,
       null=True,
       blank=True
     )
     github_url = models.URLField(
+      'GitHub Repo',
       max_length=200,
       null=True,
       blank=True
