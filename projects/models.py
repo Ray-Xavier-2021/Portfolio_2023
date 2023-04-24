@@ -3,11 +3,13 @@ from django.db import models
 # Create your models here.
 class Project(models.Model):
     thumbnail = models.ImageField(
+      'Project Image',
       upload_to='thumbnail/images',
       null=False,
       blank=False
     )
     category = models.CharField(
+      'Project Category',
       max_length=50,
       null=False,
       blank=False
@@ -18,11 +20,13 @@ class Project(models.Model):
       blank=False
     )
     languages = models.CharField(
+      'Languages Used',
       max_length=300,
       null=False,
       blank=False
     )
     description = models.TextField(
+      'Project Description',
       max_length=1000
     )
     demo = models.URLField(
