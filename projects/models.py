@@ -3,13 +3,13 @@ from django.db import models
 # Create your models here.
 class Project(models.Model):
     thumbnail = models.ImageField(
-      'Project Image',
+      'Project Screenshot',
       upload_to='thumbnail/images',
       null=False,
       blank=False
     )
     category = models.CharField(
-      'Project Category',
+      'Category',
       max_length=50,
       null=False,
       blank=False
@@ -59,4 +59,4 @@ class Project(models.Model):
     )
 
     def __str__(self) -> str:
-      return f'Category: {self.category}, Project Title: {self.title}'
+      return f'Category: {self.category}, Title: {self.title}'
