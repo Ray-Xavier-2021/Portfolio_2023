@@ -9,3 +9,7 @@ class ProjectView(viewsets.ModelViewSet):
   # Get all Projects
   queryset = Project.objects.all()
   serializer_class = ProjectSerializer
+
+
+def index(request):
+  return render(request, 'index.html')
