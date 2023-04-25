@@ -6,6 +6,6 @@ from .serializers import ProjectSerializer
 from rest_framework import viewsets
 
 class ProjectView(viewsets.ModelViewSet):
-    # Get all Projects
-    queryset = Project.objects.all()
-    serializer_class = ProjectSerializer
+  # Get all Projects
+  queryset = Project.objects.all()
+  serializer_class = ProjectSerializer
