@@ -59,4 +59,4 @@ class Project(models.Model):
     )
 
     def __str__(self) -> str:
-      return f'Category: {self.category}, Title: {self.title}'
+      return f'Project Title: {self.title}'
