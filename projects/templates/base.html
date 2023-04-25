@@ -8,11 +8,18 @@
     </title>
     {% comment %} Link Static CSS {% endcomment %}
     
-    {% comment %} Load Bootstrap {% endcomment %}
+    {% comment %} Load Bootstrap: CSS, JS {% endcomment %}
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 
   </head>
 
   <body>
-
+    <div class='container'>
+      
+      {% block content %}
+      {% endblock content %}
+    </div>
   </body>
 </html>
