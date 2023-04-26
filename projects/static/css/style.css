@@ -6,8 +6,8 @@
 } 
 
 body {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
 }
 
 .container {
@@ -225,3 +225,16 @@ button.navbar-toggler:focus,
   width: 100%;
 }
 
+/* Projects Page */
+
+.card-body-buttons {
+  display: flex;
+}
+
+.card-body-buttons a {
+  margin: 4px auto;
+}
+
+button {
+  display: none;
+}
