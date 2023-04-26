@@ -5,6 +5,8 @@ from .models import Project
 from .serializers import ProjectSerializer
 from rest_framework import viewsets
 
+from django.http import HttpResponseRedirect
+
 class ProjectView(viewsets.ModelViewSet):
   # Get all Projects
   queryset = Project.objects.all()
@@ -24,3 +26,8 @@ def projects(request):
 def detail(request, pk):
   project_detail = Project.objects.get(id=pk)
   return render(request, 'detail.html', {'project': project_detail})
+
+def delete(request, pk):
+  project = Project.objects.get(id=pk)
+  project.delete()
+  return HttpResponseRedirect('projects')
