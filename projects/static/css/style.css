@@ -1,11 +1,25 @@
+/* Universal */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 } 
 
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
 .container {
   border: 1px solid red;
+}
+
+img {
+  color: #000;
+}
+
+li {
+  list-style: none;
 }
 
 .navbar {
@@ -86,11 +100,129 @@ button.navbar-toggler:focus,
   transform: rotate(0deg);
 }
 
-#intro {
+
+/* Index / Home Page */
+#intro,
+.title {
   border-bottom: 1px solid #eee;
   text-align: center;
 }
 
 .glitch {
   color: red;
+}
+
+/* SECTION */
+.container.section-summary {
+  border: 1px solid red;
+}
+
+/* Summary */
+.summary {
+  border: 1px solid red;
+  padding: 5px;
+}
+
+/* Skills */
+.skills {
+  border: 1px solid red;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+    'title title title title'
+    'frontend frontend backend backend'
+    'version version version version';
+  padding: 5px;
+}
+
+.skill-title {
+  grid-area: title;
+}
+
+.frontend-skills-list {
+  grid-area: frontend;
+}
+
+.backend-skills-list {
+  grid-area: backend;  
+}
+
+.version-control-skills-list {
+  grid-area: version;
+  padding: 0;
+}
+
+.frontend-skills-list,
+.backend-skills-list {
+  border: 1px dashed red;
+  display: flex;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.version-control-skills-list .skill-type {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    'title title title'
+    'category1 category2 category3';
+}
+
+.version-control-skills-list .skill-type-category:first-child {
+  border: 1px solid green;
+  grid-area: title;
+  margin-bottom: 4px;
+}
+
+/* .version-control-skills-list .skill-level-category:first-child {
+  border: 1px solid red; 
+  grid-area: category1;  
+} */
+
+/* .version-control-skills-list .skill-level-category:first-child {
+  border: 1px solid red; 
+  grid-area: category2; 
+} */
+
+/* .version-control-skills-list .skill-level-category:first-child {
+  border: 1px solid red; 
+  grid-area: category3; 
+} */
+
+.version-control-skills-list .skill-level-category,
+.version-control-skills-list ul {
+  padding: 0;
+  text-align: center;
+} 
+
+.version-control-skills-list .skill-level {
+  font-weight: bold;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.skill-type-category {
+  border: 1px solid red;
+  color: green;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+
+.skill-level {
+  font-style: italic;
+}
+
+.skill-type {
+  width: 100%;
+}
+
+.skill {
+  font-size: 16px;
 }
