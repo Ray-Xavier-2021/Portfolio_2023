@@ -162,6 +162,7 @@ button.navbar-toggler:focus,
   margin-bottom: 0;
 }
 
+
 .version-control-skills-list .skill-type {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -221,7 +222,44 @@ button.navbar-toggler:focus,
   font-size: 14px;
 }
 
+.skill-type {
+  width: 100%;
+}
+
 /* Projects Page */
+.projects-list {
+  border: 1px solid purple;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+  'item item';
+  padding: 8px;
+}
+
+.projects-list-item {
+  /* border: 1px solid red; */
+  border-radius: 16px;
+  padding: 4px;
+}
+
+.projects-list-item, .card {
+}
+
+.projects-list-item:nth-child() {
+  grid-area: item;
+  display: flex;
+}
+
+.card {
+  margin: auto;
+}
+
+.card-img-top {
+  width: 300px;
+  height: 200px;
+}
 
 .card-body-buttons {
   display: flex;

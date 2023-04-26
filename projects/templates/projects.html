@@ -8,10 +8,10 @@
 {% block content %}
 <h1 class='title'>My Projects</h1>
 
-<ul class='list-group'>
+<ul class='projects-list'>
   {% for project in projects %}
-    <li class='list-group-item'>
-      <div class="m-auto card" style="width: 18rem;">
+    <li class='projects-list-item'>
+      <div class="card" style="width: 18rem;">
         <img src="{{ project.thumbnail.url }}" class="card-img-top" alt="{{ project.title }}">
         <div class="card-body">
           <h5 class="card-title">{{ project.title }}</h5>
@@ -27,7 +27,6 @@
             {% endif %}
             {{ project.languages }}
           </li>
-          <p>{{ project.languages | length }}</p>
           <li class="list-group-item project-demo"><a href="{{ project.demo }}" class="card-link">Live Demo</a></li>
           <li class="list-group-item project-github"><a href="{{ project.github_url }}" class="card-link">GitHub Repo</a></li>
         </ul>
