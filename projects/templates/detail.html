@@ -5,6 +5,19 @@
 {% endblock title %}
 
 {% block content %}
-  <h1>{{ project.title }}</h1>
+  <div class="card">
+    <img src="{{ project.thumbnail.url }}" class="card-img-top" alt="{{ project.title }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ project.title | title }}</h5>
+      <p class="card-text">{{ project.description | capfirst }}</p>
+      {% comment %} <p class="card-text"><small class="text-body-secondary">Last visited {{project.created_at}}</small></p> {% endcomment %}
+
+      <a href="{{ project.demo }}" class="card-link project-demo">Live Deployment</a>
+      <a href="{{ project.github_url }}" class="card-link project-github">GitHub Repo</a>
+    
+    </div>
+    <button class='btn btn-primary like'>Like</button>
+    
+  </div>
 
 {% endblock content %}

@@ -6,19 +6,19 @@
 {% endblock title %}
 
 {% block content %}
-<h1 class='title'>My Projects</h1>
+<h1 class='title'>Projects</h1>
 
 <ul class='projects-list'>
   {% for project in projects %}
     <li class='projects-list-item'>
       <div class="card" style="width: 18rem;">
-        <img src="{{ project.thumbnail.url }}" class="card-img-top" alt="{{ project.title }}">
+        <img src="{{ project.thumbnail.url }}" class="projects-card-img-top" alt="{{ project.title }}">
         <div class="card-body">
-          <h5 class="card-title">{{ project.title }}</h5>
-          <p class="card-text">{{ project.description | capfirst }}.</p>
+          <h5 class="card-title">{{ project.title | title }}</h5>
+          {% comment %} <p class="card-text">{{ project.description | capfirst }}.</p> {% endcomment %}
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item project-category">Category: {{ project.category }}</li>
+          <li class="list-group-item project-category">Category: {{ project.category | capfirst }}</li>
           <li class="list-group-item project-language">
             {% if project.languages > 1 %}
               Language:
@@ -27,8 +27,8 @@
             {% endif %}
             {{ project.languages }}
           </li>
-          <li class="list-group-item project-demo"><a href="{{ project.demo }}" class="card-link">Live Demo</a></li>
-          <li class="list-group-item project-github"><a href="{{ project.github_url }}" class="card-link">GitHub Repo</a></li>
+          {% comment %} <li class="list-group-item project-deployment"><a href="{{ project.demo }}" class="card-link">Live Deployment</a></li>
+          <li class="list-group-item project-github"><a href="{{ project.github_url }}" class="card-link">GitHub Repo</a></li> {% endcomment %}
         </ul>
         <div class="card-body-buttons">
           <a href="{% url 'detail' project.id %}" class="btn btn-success">View Project</a>
