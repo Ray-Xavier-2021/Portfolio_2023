@@ -20,7 +20,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from projects.views import ProjectView, index, about, projects
+from projects.views import ProjectView, index, about, projects, detail
 from rest_framework import routers
 
 route = routers.DefaultRouter()
@@ -33,6 +33,7 @@ urlpatterns = [
     path('', index, name='home'),
     path('about', about, name='about'),
     path('projects', projects, name='projects'),
+    path('project/<int:pk>', detail, name='detail'),
 ]
 
 # Media Static Files Configurations
