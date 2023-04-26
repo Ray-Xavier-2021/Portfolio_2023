@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 {% endblock title %}
@@ -6,9 +7,146 @@
 {% block content %}
   <h1 id='intro'>Welcome to <span class='glitch'>Horatio</span>'s Portfolio</h1>
 
+  <section class='summary-section'>
+    <div class='summary'>
+      <h4>Summary:</h4>
+      <p>Hey everyone, thank you for taking time to visit my page. A little about me.... I have recently stepped into to field of Web Development and so far it has been an interesting and intriguing journey. Although I am new to the field of technolgy my accomplishments may be minor but the foundation that I have laid before is one that is strong and I will be built upon as I gain further experience. My latest goal completed was graduating from Tech.IS Web Development Bootcamp, earning my 'Full-Stack Developer' certification. I acquired knowledge in Full Stack Development technologies such as Python, ReactJs, Django along with a few others.</p>
+    </div>
+
+    <div class='skills'>
+      <h4 class='skills-title'>Skills:</h4>
+
+      <ul class='frontend-skills-list'>
+
+        <li class='skill-type'>
+          <span class='skill-type-category'>Frontend Development</span>
+          <ul class='skill-level-category'>
+
+            <li class='skill-level'>Basics</li>
+
+            <ul>
+              <li class='skill'>HTML, HTML5</li>
+              <li class='skill'>CSS, CSS3</li>
+              <li class='skill'>JavaScript(ES6)</li>
+            </ul>
+          </ul>
+          
+          <ul class='skill-level-category'>
+
+            <li class='skill-level'>Responsive Web Design</li>
+
+            <ul>
+              <li class='skill'>CSS Flexbox / Grid</li>
+              <li class='skill'>Media Queries</li>
+            </ul>
+          </ul>
+          
+          <ul class='skill-level-category'>
+
+            <li class='skill-level'>Libraries / Frameworks</li>
+
+            <ul>
+              <li class='skill'>Bootstrap5</li>
+              <li class='skill'>ReactJs</li>
+              <li class='skill'>Redux</li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class='backend-skills-list'>
+
+        <li class='skill-type'>
+          <span class='skill-type-category'>Backend Development</span>
+          <ul class='skill-level-category'>
+
+            <li class='skill-level'>Basics</li>
+
+            <ul>
+              <li class='skill'>JavaScript</li>
+              <li class='skill'>NodeJS</li>
+              <li class='skill'>Python</li>
+            </ul>
+          </ul>
+          
+          <ul class='skill-level-category'>
+
+            <li class='skill-level'>Backend Tools / Technology</li>
+
+            <ul>
+              <li class='skill'>Databases: PostgresSQL</li>
+              <li class='skill'>API: C.R.U.D. Operations</li>
+            </ul>
+          </ul>
+          
+          <ul class='skill-level-category'>
+
+            <li class='skill-level'>Libraries / Frameworks</li>
+
+            <ul>
+              <li class='skill'>Django</li>
+              <li class='skill'>Django REST Framework</li>
+              <li class='skill'>Flask</li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class='version-control-skills-list'>
+
+        <li class='skill-type'>
+          <span class='skill-type-category'>Version Control</span>
+          <ul class='skill-level-category'>
+
+            <li class='skill-level'>Basics</li>
+
+            <ul>
+              <li class='skill'>CLI</li>
+              {% comment %} <li class='skill'><img href='{% static "img/command-line.png" %}'></li> {% endcomment %}
+              <li class='skill'>Git</li>
+              {% comment %} <li class='skill'><img href='{% static "img/command-line.png" %}'></li> {% endcomment %}
+              <li class='skill'>GitHub</li>
+              {% comment %} <li class='skill'><img href='{% static "img/command-line.png" %}'></li> {% endcomment %}
+            </ul>
+          </ul>
+          
+          <ul class='skill-level-category'>
+
+            <li class='skill-level'>Debugging / Testing</li>
+
+            <ul>
+              <li class='skill'></li>
+              <li class='skill'></li>
+            </ul>
+          </ul>
+          
+          <ul class='skill-level-category'>
+
+            <li class='skill-level'>CI / CD</li>
+
+            <ul>
+              <li class='skill'>Heroku</li>
+              <li class='skill'>Replit</li>
+              <li class='skill'>Azure(Pending)</li>
+            </ul>
+          </ul>
+
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
   <ul class='list-group'>
     {% for project in projects %}
       <li>{{ project.title }}</li>
     {% endfor %}
   </ul>
 {% endblock content %}
+
+{% comment %} Attribute {% endcomment %}
+{% comment %} a href="Command line icons created by joalfa - Flaticonhttps://www.flaticon.com/free-icons/command-line" title="command line icons"></a> {% endcomment %}
+
+{% comment %} <a href="https://www.flaticon.com/free-icons/git" title="git icons">Git icons created by Freepik - Flaticon</a> {% endcomment %}
+
+{% comment %} <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by riajulislam - Flaticon</a> {% endcomment %}
